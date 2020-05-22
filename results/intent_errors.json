@@ -1,0 +1,10 @@
+[
+  {
+    "text": "08126905235",
+    "intent": "phone_number_entry",
+    "intent_prediction": {
+      "name": "paket_entry",
+      "confidence": 0.5033919215202332
+    }
+  }
+]

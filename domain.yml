@@ -1,0 +1,78 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- menyapa
+- konfirmasi_member
+- menolak
+- mencari_jodoh
+- name_entry
+- email_entry
+- phone_number_entry
+- minat_daftar
+- tanya_harga
+- paket_entry
+- user_criteria
+entities:
+- name
+- email
+- phone_number
+slots:
+  email:
+    type: unfeaturized
+  name:
+    type: unfeaturized
+  paket:
+    type: unfeaturized
+  phone_number:
+    type: unfeaturized
+responses:
+  utter_greet:
+  - text: Hai kak. Sudah menjadi member SatukanCinta.com ka?:)
+  utter_end_conversation:
+  - text: Terima kasih kak. Bila ada pertanyaan lain kakak dapat menghubungi saya:)
+  utter_ask_full_name:
+  - text: Apa nama lengkap yang terdaftar di akunnya kak?
+  utter_ask_email:
+  - text: Apa email yang terdaftar di akunnya kak {name}?
+  utter_ask_phone_number:
+  - text: Apa nomor HP yang terdaftar di akunnya kak {name}?
+  utter_check_database:
+  - text: Baik kak {name}. saya cek dulu ya
+  utter_db_found:
+  - text: Baik kak {name}. saya sudah menemukan akun kakak
+  utter_db_not_found:
+  - text: Maaf, kami belum bisa menemukan akun kakak
+  utter_offer_plan:
+  - text: "Saat ini kakak masih menggunakan akun gratis/plan, bila kaka serius ingin\
+      \ menemukan pasangan hidup, kami sarankan menggunakan layanan Silver ka. \n\
+      \ Coach SatukanCinta akan secara khusus mengenalkan kakak dengan calon yang\
+      \ sesuai kriteria kakak. \n Apa kaka berminat untuk mendaftar layanan Silver?"
+  utter_offer_paket:
+  - text: "Dengan Silver Membership, Anda akan dibantu oleh relationship coach SatukanCinta\
+      \ yang mencarikan pasangan untuk Anda sesuai keinginan Anda, \n yang juga berminat\
+      \ dengan Anda, selain itu coach juga sebagai mediator. \n Coach kami juga tersedia\
+      \ untuk bebas konsultasi tentang hubungan dan keluarga, rutin melalui WhatsApp\
+      \ dan video call.\n Dengan berbagai keuntungan ini, kami menyediakan dua paketuntuk\
+      \ silver plan yaitu: \n 1) Paket silver plan/3 bulan seharga Rp. 1.098.000 \n\
+      \ 2) Paket silver plan/6 bulan seharga Rp. 1.897.000\n Paket silver plan yang\
+      \ mana yang ingin dipilih kak?:) "
+  utter_link_pembayaran:
+  - text: "baik kak. untuk metode pembayaran dapat di transfer lewat bank, DANA dan\
+      \ juga LinkAja. \n berikut merupakan panduan untuk pembayaran langganan silver\
+      \ di https://satukancinta.com/activation kak "
+  utter_link_registrasi:
+  - text: "Silakan daftar dulu ya ka di https://satukancinta.com . \n Di sini, kakak\
+      \ dapat menemukan teman baru dalam komunitas positif yang bersahabat."
+  utter_offer_plan_registrasi:
+  - text: "Untuk membuat profil saja bisa dicoba gratis ka. \n Bila kakak serius ingin\
+      \ menemukan pasangan hidup, kami sarankan menggunakan layanan Silver ka. \n\
+      \ Coach SatukanCinta akan secara khusus mengenalkan kaka dengan calon yang sesuai\
+      \ kriteria kakak. \n Apa kaka berminat untuk mendaftar layanan Silver?"
+  utter_ask_criteria:
+  - text: Halo kak:). Adakah kriteria pasangan yang kakak inginkan?
+  utter_answer_criteria:
+  - text: "Kami dapat mencarikan calon pasangan sesuai kriteria kakak. \n Sebelumnya,\
+      \ apakah kakak sudah menjadi member SatukanCinta.com ka?"
+actions:
+- action_member_form
